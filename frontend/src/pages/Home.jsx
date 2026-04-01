@@ -1,6 +1,7 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import "./Home.css";
 
+// eslint-disable-next-line no-unused-vars
 function pct(v) { return `${Math.round(v ?? 0)}%`; }
 function round1(v) { return Math.round((v ?? 0) * 10) / 10; }
 
@@ -149,6 +150,7 @@ function useCardMouse(ref) {
     };
     el.addEventListener("mousemove", move);
     return () => el.removeEventListener("mousemove", move);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 }
 
